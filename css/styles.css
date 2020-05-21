@@ -149,6 +149,7 @@ MOBILE STYLES
     width: 90%;
     text-align: center;
     line-height: 26px;
+    color: #202046;
     margin-bottom: 20px;
   }
   .testimonial-container .description {
@@ -163,6 +164,7 @@ MOBILE STYLES
     position: absolute;
     top: 210px;
     font-weight: 700;
+    color: #202046;
     font-size: 16px;
   }
   .testimonial-container .job-description {
@@ -185,18 +187,19 @@ DESKTOP STYLES
 ***************************************************
 */
 @media only screen and (min-width: 376px) and (max-width: 1440px) {
+  .attribution {
+    font-size: 15px;
+    text-align: center;
+    width: 1440px;
+    margin-top: 10px;
+  }
+  .attribution a {
+    color: #3e52a3;
+  }
   body {
     font-size: 25px;
     font-weight: 300;
-    height: 720px;
-  }
-  .navigation-button {
-    position: absolute;
-    left: 850px;
-    top: 600px;
-    z-index: 3;
-    height: 50px;
-    width: 100px;
+    height: 100vh;
   }
   .background {
     display: -webkit-box;
@@ -209,8 +212,16 @@ DESKTOP STYLES
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 720px;
+    height: 100vh;
     width: 1440px;
+  }
+  .background .navigation-button {
+    position: absolute;
+    left: 850px;
+    top: 600px;
+    z-index: 3;
+    height: 50px;
+    width: 100px;
   }
   .background #bottom-background {
     position: relative;
@@ -225,7 +236,6 @@ DESKTOP STYLES
   }
   .background #bottom-background #bg-quote {
     position: absolute;
-    height: 80px;
     top: 200px;
     left: 320px;
   }
@@ -308,6 +318,7 @@ DESKTOP STYLES
     width: 88%;
     left: 215px;
     line-height: 42px;
+    color: #202046;
   }
   .testimonial-container .column-container .bottom-column .description {
     display: -webkit-box;
@@ -324,6 +335,7 @@ DESKTOP STYLES
   .testimonial-container .column-container .bottom-column .name {
     position: relative;
     top: 30px;
+    color: #202046;
     font-size: 20px;
     font-weight: 700;
   }
@@ -334,15 +346,6 @@ DESKTOP STYLES
     font-size: 20px;
     font-weight: 500;
     margin-left: 10px;
-  }
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-    width: 1440px;
-    margin-top: 10px;
-  }
-  .attribution a {
-    color: #3e52a3;
   }
 }
 
