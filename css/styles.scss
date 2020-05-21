@@ -31,6 +31,18 @@ MOBILE STYLES
 ***************************************************
 */
 @media only screen and (max-width: 375px) {
+
+    .attribution {
+        font-size: 10px;
+        text-align: center;
+        width: 375px;
+        margin-top: 5px;
+      }
+    
+      .attribution a {
+        font-size: 10px;
+        color: hsl(228, 45%, 44%);
+      }
     // navigation button
     .navigation-button {
         position: absolute;
@@ -95,7 +107,6 @@ MOBILE STYLES
     top: 0px;
     position: absolute;
     flex-direction: column;
-    border: 1px solid black;
     width: $mobile-width;
     height: 667px;
 
@@ -165,15 +176,13 @@ box-shadow: 0px 50px 50px -30px $grayish-blue;
 
 }
 
-
-
 /*
 ***************************************************
 DESKTOP STYLES
 ***************************************************
 */
 
-@media only screen and (min-width: 376px) { 
+@media only screen and (min-width: 376px) and (max-width: 1440px) { 
 
     body {
         font-size: 25px;
@@ -236,7 +245,6 @@ DESKTOP STYLES
         }
 
     }
-
 
 .testimonial-container {
     position: absolute;
@@ -316,6 +324,18 @@ DESKTOP STYLES
     }
 
 }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    width: 1440px;
+    margin-top: 10px;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
 }
 #card-0 {
     display: inherit;
@@ -325,8 +345,5 @@ DESKTOP STYLES
     display: none;
 }
 
-// #john {
-//     display: none;
-// }
 
 
