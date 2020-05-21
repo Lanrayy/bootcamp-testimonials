@@ -11,38 +11,56 @@ body {
     height: 667px;
     font-family: "Inter", sans-serif;
     font-size: 18px;
-}
 
-@media only screen and (max-width: 375px) {
-    // navigation button
     .navigation-button {
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        border-radius: 100px;
+        background-color: white;
+        // border: 1px solid purple;
+    }
+}
+
+
+
+/*
+***************************************************
+MOBILE STYLES
+***************************************************
+*/
+@media only screen and (max-width: 375px) {
+    // navigation button
+    .navigation-button {
         position: absolute;
         top: 275px;
         left: 150px;
-        z-index: 2;
-        // border: 1px solid red;
+        z-index: 3;
         height: 40px;
         width: 80px;
-        border-radius: 100px;
-        background-color: white;
+        // border: 1px solid red;
+        .nav  {
+            width: 10px;
+        }
     }
-
+    //Background Styles
     .background {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100vh;
+        height: 667px;
     }
-    // Background styles
 
     #top-background {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 50vh;
+        height: 50%;
+
+        #bg-pattern {
+            width: 330px;
+        }
 
         // border: 1px solid red;
         
@@ -54,30 +72,23 @@ body {
         flex-direction: column;
         align-items: center;
         // justify-content: space-between;
-        height: 50vh;
+        height: 50%;
+        // border: 1px solid red;
 
-    }
-    #bg-pattern {
-        width: 330px;
-    }
+        #bg-quote {
+            width: 60px;
+            position: absolute;
+            top: 20px;
+        }
 
-    #bg-quote {
-        width: 60px;
+        #bg-curve {
+            width: 375px;
+            height: 70px;
         position: absolute;
-        top: 10px;
-    }
-
-    #bg-curve {
-        width: 375px;
-        height: 70px;
-    position: absolute;
-    bottom: 0px;
-    }
-    // nav button size
-    .nav  {
-        width: 10px;
-    }
-
+        bottom: 0px;
+        }
+    }    
+   
 // Container Styles
 .testimonial-container {
     display: flex;
@@ -86,21 +97,27 @@ body {
     flex-direction: column;
     border: 1px solid black;
     width: $mobile-width;
+    height: 667px;
 
+    .column-container  {
+        flex-direction: column;
+        height: 100%;
+    }
 // The styling for both top and bottom columns
     .columns {
-        // border: 1px solid red;
-        height: 50vh;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    position: relative;
+    // border: 1px solid red;
+    height: $column-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
 
+
     .quote {
-        position: relative;
-        top: -25px;
+        position: absolute;
+        top: 40px;
         font-weight: weight(regular);
         width: 90%;
         text-align: center;
@@ -109,9 +126,15 @@ body {
         margin-bottom: 20px;
     }
     
+    .description {
+
+        display: flex;
+        justify-content: center;
+        // position: absolute
+    }
     .name {
-        position: relative;
-        top: -25px;
+        position: absolute;
+        top: 210px;
         font-weight: weight(bold);
         // border: 1px solid blue;
         font-size: 16px;
@@ -119,13 +142,16 @@ body {
     }
 
     .job-description {
-        position: relative;
-        top: -25px;
+        position: absolute;
+        top: 230px;
         // border: 1px solid green;
         color: $grayish-blue;
         font-size: 16px;
     }
 
+
+
+    
 }
 
 // Styles for all images
@@ -137,13 +163,170 @@ box-shadow: 0px 50px 50px -30px $grayish-blue;
 }
 
 
+}
 
-// Hiding John for the time being
-#john{
+
+
+/*
+***************************************************
+DESKTOP STYLES
+***************************************************
+*/
+
+@media only screen and (min-width: 376px) { 
+
+    body {
+        font-size: 25px;
+        font-weight: weight(regular);
+        height:720px;
+    }
+
+    .navigation-button{
+        position: absolute;
+        left: 850px;
+        top: 600px;
+        z-index: 3;
+        height: 50px;
+        width:100px;
+
+    }
+    .background {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 720px;
+        width: 1440px;
+        // border: 1px solid blue;
+
+        #bottom-background {
+            position: relative;
+            order: -1;
+            // border: 1px solid blue;
+            width: 50vw;
+
+            #bg-curve {
+                position: absolute;
+                bottom: 0px;
+
+            }
+
+            #bg-quote {
+                position: absolute;
+                height: 80px;
+                top: 200px;
+                left: 320px;
+            }
+
+        }
+
+        #top-background {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            
+            order: 1;
+            // border: 1px solid red;
+            width: 50vw;
+
+            #bg-pattern {
+                width: 90%;
+            }
+            
+        }
+
+    }
+
+
+.testimonial-container {
+    position: absolute;
+    top: 0px;
+    height: inherit;
+    display: flex;
+
+    .column-container {
+        width: 1440px;
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+
+        .columns {
+            width: $desktop-column-width;
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+
+            // border: 1px solid;
+    
+        }
+
+        .top-column {
+            order: 1;
+            align-items: center;
+            justify-content: center;
+
+            .image {
+                position: relative;
+                right: 50px;
+                top: 10px;
+                width: 70%;
+                
+                border-radius: 10px;
+                box-shadow: -70px 130px 70px -100px $grayish-blue;
+            }
+        }
+
+        .bottom-column {
+            justify-content: center;
+            .quote {
+                font-size: 32px;
+                font-weight: weight(regular);
+                position: relative;
+                top: 30px;
+                width: 88%;
+                left: 215px; 
+                line-height: 42px;
+                
+            }
+            .description {
+                display: flex;
+                flex-direction: row;
+                margin-top: 30px;
+                position: relative;
+                left: 215px;
+            }
+
+            .name {
+                position: relative;
+                top: 30px;
+
+                font-size: 20px;
+                font-weight: weight(bold);
+            }
+            .job-description {
+                position: relative;
+                top: 30px;
+                color: $grayish-blue;
+                font-size: 20px;
+                font-weight: weight(medium);
+                margin-left: 10px;
+            }
+        }
+
+    }
+
+}
+}
+#card-0 {
+    display: inherit;
+}
+
+#card-1 {
     display: none;
 }
 
-// #tanya {
-//     // display: none;
+// #john {
+//     display: none;
 // }
-}
+
+

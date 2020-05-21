@@ -4,6 +4,9 @@ $grayish-blue: hsl(240, 18%, 77%);
 // Screen sizes
 $mobile-width: 375px;
 $desktop-width: 375px;
+$column-height: (667px / 2);
+
+$desktop-column-width: (1440px / 2);
 
 
 // Font Weights
@@ -13,6 +16,8 @@ $font-weights: (
     "medium": 500,
     "bold": 700,
 );
+
+
 
 
 // Font weight function

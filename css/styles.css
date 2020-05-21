@@ -12,24 +12,35 @@ body {
   font-size: 18px;
 }
 
+body .navigation-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  background-color: white;
+}
+
+/*
+***************************************************
+MOBILE STYLES
+***************************************************
+*/
 @media only screen and (max-width: 375px) {
   .navigation-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     position: absolute;
     top: 275px;
     left: 150px;
-    z-index: 2;
+    z-index: 3;
     height: 40px;
     width: 80px;
-    border-radius: 100px;
-    background-color: white;
+  }
+  .navigation-button .nav {
+    width: 10px;
   }
   .background {
     display: -webkit-box;
@@ -42,7 +53,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 100vh;
+    height: 667px;
   }
   #top-background {
     display: -webkit-box;
@@ -54,7 +65,10 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 50vh;
+    height: 50%;
+  }
+  #top-background #bg-pattern {
+    width: 330px;
   }
   #bottom-background {
     display: -webkit-box;
@@ -68,24 +82,18 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 50vh;
+    height: 50%;
   }
-  #bg-pattern {
-    width: 330px;
-  }
-  #bg-quote {
+  #bottom-background #bg-quote {
     width: 60px;
     position: absolute;
-    top: 10px;
+    top: 20px;
   }
-  #bg-curve {
+  #bottom-background #bg-curve {
     width: 375px;
     height: 70px;
     position: absolute;
     bottom: 0px;
-  }
-  .nav {
-    width: 10px;
   }
   .testimonial-container {
     display: -webkit-box;
@@ -99,9 +107,18 @@ body {
             flex-direction: column;
     border: 1px solid black;
     width: 375px;
+    height: 667px;
+  }
+  .testimonial-container .column-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
   }
   .testimonial-container .columns {
-    height: 50vh;
+    position: relative;
+    height: 333.5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -117,23 +134,31 @@ body {
             align-items: center;
   }
   .testimonial-container .quote {
-    position: relative;
-    top: -25px;
+    position: absolute;
+    top: 40px;
     font-weight: 300;
     width: 90%;
     text-align: center;
     line-height: 26px;
     margin-bottom: 20px;
   }
+  .testimonial-container .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .testimonial-container .name {
-    position: relative;
-    top: -25px;
+    position: absolute;
+    top: 210px;
     font-weight: 700;
     font-size: 16px;
   }
   .testimonial-container .job-description {
-    position: relative;
-    top: -25px;
+    position: absolute;
+    top: 230px;
     color: #babacf;
     font-size: 16px;
   }
@@ -143,8 +168,171 @@ body {
     -webkit-box-shadow: 0px 50px 50px -30px #babacf;
             box-shadow: 0px 50px 50px -30px #babacf;
   }
-  #john {
-    display: none;
+}
+
+/*
+***************************************************
+DESKTOP STYLES
+***************************************************
+*/
+@media only screen and (min-width: 376px) {
+  body {
+    font-size: 25px;
+    font-weight: 300;
+    height: 720px;
   }
+  .navigation-button {
+    position: absolute;
+    left: 850px;
+    top: 600px;
+    z-index: 3;
+    height: 50px;
+    width: 100px;
+  }
+  .background {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 720px;
+    width: 1440px;
+  }
+  .background #bottom-background {
+    position: relative;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    width: 50vw;
+  }
+  .background #bottom-background #bg-curve {
+    position: absolute;
+    bottom: 0px;
+  }
+  .background #bottom-background #bg-quote {
+    position: absolute;
+    height: 80px;
+    top: 200px;
+    left: 320px;
+  }
+  .background #top-background {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 50vw;
+  }
+  .background #top-background #bg-pattern {
+    width: 90%;
+  }
+  .testimonial-container {
+    position: absolute;
+    top: 0px;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .testimonial-container .column-container {
+    width: 1440px;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .testimonial-container .column-container .columns {
+    width: 720px;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testimonial-container .column-container .top-column {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testimonial-container .column-container .top-column .image {
+    position: relative;
+    right: 50px;
+    top: 10px;
+    width: 70%;
+    border-radius: 10px;
+    -webkit-box-shadow: -70px 130px 70px -100px #babacf;
+            box-shadow: -70px 130px 70px -100px #babacf;
+  }
+  .testimonial-container .column-container .bottom-column {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testimonial-container .column-container .bottom-column .quote {
+    font-size: 32px;
+    font-weight: 300;
+    position: relative;
+    top: 30px;
+    width: 88%;
+    left: 215px;
+    line-height: 42px;
+  }
+  .testimonial-container .column-container .bottom-column .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 30px;
+    position: relative;
+    left: 215px;
+  }
+  .testimonial-container .column-container .bottom-column .name {
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .testimonial-container .column-container .bottom-column .job-description {
+    position: relative;
+    top: 30px;
+    color: #babacf;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+}
+
+#card-0 {
+  display: inherit;
+}
+
+#card-1 {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

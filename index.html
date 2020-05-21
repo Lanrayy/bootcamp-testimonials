@@ -18,6 +18,8 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      width: 1440px;
+      margin-top: 5px;
     }
 
     .attribution a {
@@ -27,9 +29,10 @@
 </head>
 
 <body>
+  <!-- Navigation Button -->
   <div class="navigation-button">
-    <img class="nav" src="images/icon-prev.svg" />
-    <img class="nav" src="images/icon-next.svg" />
+    <img id="icon-prev" class="nav" src="images/icon-prev.svg" />
+    <img id="icon-next" class="nav" src="images/icon-next.svg" />
   </div>
   <!-- Background -->
   <div class="background">
@@ -43,32 +46,36 @@
   </div>
 
   <div class="testimonial-container">
-    <div id="tanya">
-      <div class="columns">
+    <div id="card-0" class="column-container">
+      <div class="top-column columns">
         <img id="tanya-image" class="image" src="images/image-tanya.jpg" />
       </div>
-      <div class="columns">
+      <div class="bottom-column columns">
         <p class="quote">“ I’ve been interested in coding for a while but never taken the jump, until now.
           I couldn’t recommend this course enough. I’m now in the job of my dreams and so
           excited about the future. ” </p>
-        <p class="name"> Tanya Sinclair </p>
-        <p class="job-description">UX Engineer</p>
+        <div class="description">
+          <p class="name"> Tanya Sinclair </p>
+          <p class="job-description">UX Engineer</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-container">
-    <div id="john">
-      <div class="columns">
+    <div id="card-1" class="column-container hidden">
+      <div class="top-column columns">
         <img id="john-image" class="image" src="images/image-john.jpg" />
       </div>
-      <div class="columns">
+      <div class="bottom-column columns">
         <p class="quote">“If you want to lay the best foundation possible I’d recommend
           taking this course.
           The depth the instructors go into is incredible. I now feel so confident about
           starting up as a professional developer.” </p>
-        <p class="name"> John Tarkpor </p>
-        <p class="job-description">Junior Front-end Developer</p>
+        <div class="description">
+          <p class="name"> John Tarkpor </p>
+          <p class="job-description">Junior Front-end Developer</p>
+        </div>
       </div>
     </div>
   </div>
@@ -76,8 +83,10 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Lanre Sodeinde | madebylanray</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
